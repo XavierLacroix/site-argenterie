@@ -1,52 +1,66 @@
+/* Style général */
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #fdfdfd;
+    font-family: 'Playfair Display', serif;
+    background-color: #f8f6f3;
     color: #333;
   }
   
   header {
-    background-color: #f5f5f5;
-    padding: 2rem;
+    background: linear-gradient(135deg, #ffffff, #f2f2f2);
+    padding: 3rem 1rem;
     text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
   
   header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    color: #8c7b75;
+    text-shadow: 1px 1px 2px #c0c0c0;
   }
   
   header p {
-    font-size: 1.2rem;
-    color: #666;
+    font-size: 1.3rem;
+    color: #7a7a7a;
+    margin-top: 1rem;
   }
   
+  /* Section produits */
   .produits {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 2.5rem;
+    padding: 3rem 2rem;
   }
   
   .produit {
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 1rem;
+    border-radius: 16px;
+    padding: 1.5rem;
     width: 300px;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .produit:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
   }
   
   .produit img {
     max-width: 100%;
-    border-radius: 8px;
+    border-radius: 12px;
+    margin-bottom: 1rem;
   }
   
   .produit h2 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin: 0.5rem 0;
+    color: #4b3f35;
   }
   
   .produit p {
@@ -56,29 +70,35 @@ body {
   
   .prix {
     font-weight: bold;
+    font-size: 1.2rem;
+    color: #9c7e65;
     margin: 1rem 0;
   }
   
+  /* Bouton élégant */
   .btn {
     display: inline-block;
-    padding: 0.6rem 1rem;
-    background-color: #333;
-    color: #fff;
+    padding: 0.8rem 1.2rem;
+    background: linear-gradient(145deg, #d4af37, #c5a042);
+    color: white;
     text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background 0.4s ease, transform 0.3s ease;
   }
   
   .btn:hover {
-    background-color: #555;
+    background: linear-gradient(145deg, #c5a042, #d4af37);
+    transform: scale(1.05);
   }
   
+  /* Footer */
   footer {
     text-align: center;
-    padding: 1rem;
-    background-color: #f5f5f5;
-    margin-top: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f2f2f2, #ffffff);
     font-size: 0.9rem;
     color: #888;
+    margin-top: 2rem;
   }
   
