@@ -2,52 +2,58 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Argenterie Élégante</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-
+  <meta name="description" content="Site vitrine d'Argenterie Élégante : découvrez et contactez-nous pour l'achat de pièces d'argenterie artisanale.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
+  <!-- Script JS -->
+  <script src="script.js" defer></script>
 </head>
-<!-- Mise à jour forcée -->
-
 <body>
-
-  <header>
-    <h1>Argenterie Élégante</h1>
-    <p>Découvrez l'excellence de l'argenterie française.</p>
+  <header class="header">
+    <div class="container">
+      <h1 class="fade-in">Argenterie Élégante</h1>
+      <p class="fade-in delay">Excellence artisanale en argent, façonnée en France.</p>
+    </div>
   </header>
 
-  <main>
-    <section class="produits">
-      <div class="produit">
-        <img src="images/produit1.png" alt="Produit 1">
+  <main class="container">
+    <section id="produits" class="produits">
+      <article class="produit">
+        <img src="images/produit1.png" alt="Coupe en argent massif">
         <h2>Coupe en argent massif</h2>
         <p>Élégante coupe artisanale en argent 925, idéale pour vos événements spéciaux.</p>
-        <p class="prix">Prix : 450€</p>
-        <a href="mailto:contact@argenterie-elegante.fr?subject=Demande%20d'achat%20-%20Coupe%20en%20argent" class="btn">Contacter pour acheter</a>
-      </div>
-
-      <div class="produit">
-        <img src="images/produit2.png" alt="Produit 2">
+        <p class="prix">450 €</p>
+        <a href="mailto:contact@argenterie-elegante.fr?subject=Demande%20-%20Coupe%20en%20argent" class="btn">Contacter</a>
+      </article>
+      <article class="produit">
+        <img src="images/produit2.png" alt="Plateau en argent gravé">
         <h2>Plateau en argent gravé</h2>
         <p>Plateau raffiné aux motifs traditionnels, parfait pour les grandes occasions.</p>
-        <p class="prix">Prix : 780€</p>
-        <a href="mailto:contact@argenterie-elegante.fr?subject=Demande%20d'achat%20-%20Plateau%20en%20argent" class="btn">Contacter pour acheter</a>
-      </div>
-
-      <div class="produit">
-        <img src="images/produit3.png" alt="Produit 3">
+        <p class="prix">780 €</p>
+        <a href="mailto:contact@argenterie-elegante.fr?subject=Demande%20-%20Plateau%20en%20argent" class="btn">Contacter</a>
+      </article>
+      <article class="produit">
+        <img src="images/produit3.png" alt="Service à thé en argent">
         <h2>Service à thé en argent</h2>
         <p>Service complet alliant tradition et élégance, pour vos moments de partage.</p>
-        <p class="prix">Prix : 1200€</p>
-        <a href="mailto:contact@argenterie-elegante.fr?subject=Demande%20d'achat%20-%20Service%20à%20thé" class="btn">Contacter pour acheter</a>
-      </div>
+        <p class="prix">1200 €</p>
+        <a href="mailto:contact@argenterie-elegante.fr?subject=Demande%20-%20Service%20à%20thé" class="btn">Contacter</a>
+      </article>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Argenterie Élégante. Tous droits réservés.</p>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Argenterie Élégante – Tous droits réservés.</p>
+    </div>
   </footer>
-
 </body>
 </html>

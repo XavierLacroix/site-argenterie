@@ -1,104 +1,133 @@
-/* Style général */
-body {
+/* Variables */
+:root {
+    --bg: #f8f6f3;
+    --text: #333;
+    --accent: #8c7e65;
+    --accent-light: #a3927d;
+    --card-bg: #ffffff;
+    --transition: 0.3s ease;
+  }
+  
+  /* Reset & global */
+  * {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Header */
+  .header {
+    background: #fff;
+    text-align: center;
+    padding: 3rem 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .header h1 {
     font-family: 'Playfair Display', serif;
-    background-color: #f8f6f3;
-    color: #333;
-  }
-  
-  header {
-    background: linear-gradient(135deg, #ffffff, #f2f2f2);
-    padding: 3rem 1rem;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  }
-  
-  header h1 {
-    margin: 0;
     font-size: 3rem;
-    color: #8c7b75;
-    text-shadow: 1px 1px 2px #c0c0c0;
+    color: var(--accent);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 1s ease;
+  }
+  .header p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 0.5rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 1s ease 0.3s;
   }
   
-  header p {
-    font-size: 1.3rem;
-    color: #7a7a7a;
-    margin-top: 1rem;
-  }
-  
-  /* Section produits */
+  /* Produits */
   .produits {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2.5rem;
-    padding: 3rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2.5rem 0;
   }
-  
   .produit {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 16px;
-    padding: 1.5rem;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .produit:hover {
+    transform: translateY(-15px) scale(1.05); /* ← Plus marqué ici */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); /* ← Ombre plus forte */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
-  .produit:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-  }
-  
   .produit img {
-    max-width: 100%;
-    border-radius: 12px;
-    margin-bottom: 1rem;
+    width: 100%;
+    display: block;
   }
-  
   .produit h2 {
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
-    color: #4b3f35;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--accent);
+    margin: 1rem;
   }
-  
   .produit p {
-    font-size: 1rem;
+    margin: 0 1rem 1rem;
     color: #555;
   }
-  
   .prix {
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #9c7e65;
-    margin: 1rem 0;
+    font-weight: 500;
+    color: var(--accent-light);
+    margin: 0 1rem 1.5rem;
   }
   
-  /* Bouton élégant */
+  /* Bouton */
   .btn {
     display: inline-block;
-    padding: 0.8rem 1.2rem;
-    background: linear-gradient(145deg, #d4af37, #c5a042);
-    color: white;
+    margin: 0 1rem 1.5rem;
+    padding: 0.6rem 1.2rem;
+    background: var(--accent);
+    color: #fff;
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 25px;
     font-weight: bold;
-    transition: background 0.4s ease, transform 0.3s ease;
+    transition: background var(--transition), transform var(--transition);
   }
-  
   .btn:hover {
-    background: linear-gradient(145deg, #c5a042, #d4af37);
-    transform: scale(1.05);
+    background: var(--accent-light);
+    transform: scale(1.08); /* ← Légère élévation du bouton aussi */
   }
   
   /* Footer */
-  footer {
+  .footer {
+    background: #fafafa;
     text-align: center;
-    padding: 2rem;
-    background: linear-gradient(135deg, #f2f2f2, #ffffff);
+    padding: 2rem 0;
+    border-top: 1px solid #e0e0e0;
+  }
+  .footer p {
+    color: #999;
     font-size: 0.9rem;
-    color: #888;
-    margin-top: 2rem;
+  }
+  
+  /* Classes utilitaires pour l’animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+  }
+  .show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
   }
   
